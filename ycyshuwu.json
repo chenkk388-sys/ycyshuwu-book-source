@@ -1,0 +1,41 @@
+[
+  {
+    "bookSourceComment": "异次元书屋，纯净无弹窗，防采集首发站。修正：正文class主选+id回退、补UA、修replaceRegex、修chapterUrl",
+    "bookSourceGroup": "个人站",
+    "bookSourceName": "异次元书屋",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://ycyshuwu.cc",
+    "bookUrlPattern": "https?://ycyshuwu\\.cc/book/\\d+\\.html",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+    "enabled": true,
+    "enabledExplore": false,
+    "customOrder": 0,
+    "searchUrl": "https://ycyshuwu.cc/search.html,{\"method\":\"POST\",\"body\":\"searchkey={{key}}\"}",
+    "exploreUrl": "",
+    "ruleSearch": {
+      "bookList": "class.ser-ret@tag.li",
+      "name": "tag.h3@tag.a@text",
+      "author": "tag.em@tag.span.1@text",
+      "bookUrl": "tag.h3@tag.a@href",
+      "coverUrl": "tag.img@_src",
+      "intro": "class.g_ells@text"
+    },
+    "ruleBookInfo": {
+      "name": "class.det-info@tag.h1@text",
+      "author": "class.ttl@tag.span@text",
+      "intro": "class.det-abt@tag.p@text",
+      "coverUrl": "class.cover@tag.img@src",
+      "tocUrl": ""
+    },
+    "ruleToc": {
+      "chapterList": "id.chapterList@tag.li",
+      "chapterName": "tag.a@tag.span@text",
+      "chapterUrl": "tag.a@href"
+    },
+    "ruleContent": {
+      "content": "class.read-content@html|id.TextContent@html|id.mlfy_main_text@html",
+      "title": "tag.h1@text",
+      "replaceRegex": "##<dt[^>]*>[\\s\\S]*?</dt>##\n##<script[^>]*>[\\s\\S]*?</script>##\n##&emsp;##"
+    }
+  }
+]
